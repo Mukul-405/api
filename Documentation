@@ -1,0 +1,49 @@
+1. /v1 Endpoint
+Input Queries: ['a', 'ivy', 'homes', 'soft', 'start', 'up']
+
+Output:
+
+Names are returned based on the prefix provided.
+
+Examples include:
+aa, aabdknlvkc, aabrkcd, aadgdqrwdy, ivyn, up, uplamqa, upmwuga
+
+Observation:
+i)  Names are more structured and resemble word-like patterns.
+ii) Prefixes like ivy and up result in shorter names.
+
+2. /v2 Endpoint
+Input Queries: ['am', 'bna', 'mna', 'zo', '09']
+
+Output:
+Examples include:
+
+am3ous05, am6o3s, mnas5uuh, zo9xd6xi, 090ny
+
+Observation:
+i)  Names contain alphanumeric combinations.
+ii) Prefixes like zo and 09 produce numeric-heavy results.
+
+3. /v3 Endpoint
+Input Queries: ['+', '9', 'muk', '$', 'the', 'query', 'node', 'api', 'done', 'an', 'bf', 'do', 'iit']
+
+Output:
+Examples include:
+
+0+22l2p8, 9+qab3m, an43e7uf, bf-gx5., do5h9ece98
+
+Observation:
+
+i)   Names include special characters (+, ., -) and complex patterns.
+ii)  Prefix 9 produces diverse combinations with numbers and special characters.
+iii) Prefixes like an, bf, and do result in shorter names with special characters
+
+General Observations
+Each endpoint behaves differently in terms of output format:
+
+/v1: Word-like patterns.
+/v2: Alphanumeric combinations.
+/v3: Complex patterns with special characters.
+
+There is no strict rate limiting observed; however, introducing a delay (e.g., 100ms) between requests is recommended to avoid overloading the server.
+Results vary significantly depending on the input query.

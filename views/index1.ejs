@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Character Search</title>
+  </head>
+  <body>
+    <h1>Search Autocomplete Names</h1>
+
+    <!-- <% if (typeof error !== 'undefined') { %>
+    <div style="color: red;"><%= error %></div>
+  <% } %> -->
+
+    <form action="/search/<%=type%>" method="POST">
+      <label>Enter a string:</label>
+      <input type="text" name="query" />
+      <button type="submit">Search</button>
+    </form>
+  </body>
+</html>

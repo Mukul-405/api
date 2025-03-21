@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results for <%= query %></title>
+</head>
+<body>
+  <h1>Names That Contain "<%= query %>"</h1>
+  
+  <% if (names.length === 0) { %>
+    <p>No results found for this character</p>
+  <% } else { %>
+    <ul>
+      <% names.forEach(name => { %>
+        <li><%= name %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+
+  <a href="/<%=type%>">Search again</a>
+</body>
+</html>

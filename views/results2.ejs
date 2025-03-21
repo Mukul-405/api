@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Results for <%= query %></title>
+  </head>
+  <body>
+    <h1>Names Extracted Using Automation</h1>
+
+    <% if (names.length === 0) { %>
+    <p>No results found.</p>
+    <% } else { %>
+    <ul>
+      <% names.forEach(name => { %>
+      <li><%= name %></li>
+      <% }) %>
+    </ul>
+    <% } %>
+
+    <a href="/<%=type%>">Run Automation Again</a>
+  </body>
+</html>
