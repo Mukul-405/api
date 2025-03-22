@@ -3,7 +3,9 @@
 3 Api for Autocomplete step
 
 http://35.200.185.69:8000/v1/autocomplete?query=<string>
+
 http://35.200.185.69:8000/v2/autocomplete?query=<string>
+
 http://35.200.185.69:8000/v3/autocomplete?query=<string>
 
 # Overview
@@ -14,18 +16,18 @@ This project explores an autocomplete API with three versions (/v1, /v2, /v3) to
 
 1) Initial Queries:
 
-Predefined prefixes are used as starting points for each API version.
+     Predefined prefixes are used as starting points for each API version.
 
-Examples: /v1 → ['a', 'ivy', 'homes', 'soft', 'start', 'up'].
+     Examples: /v1 → ['a', 'ivy', 'homes', 'soft', 'start', 'up'].
 
 2) Automated Extraction:
 
-Recursive exploration of API responses using the prefixes.
-Results are collected in a Set to ensure uniqueness.
+     Recursive exploration of API responses using the prefixes.
+     Results are collected in a Set to ensure uniqueness.
 
 3) Dynamic Rendering:
 
-Extracted names are displayed using EJS templates (results2.ejs).
+     Extracted names are displayed using EJS templates (results2.ejs).
 
 # Findings
 
@@ -69,21 +71,21 @@ Each endpoint behaves differently:
 
 git clone https://github.com/Mukul-405/api.git
 
-Install dependencies:
+1. Install dependencies:
 
-npm install express axios dotenv ejs
+    npm install express axios dotenv ejs
 
-Start the server:
+2. Start the server:
 
-node app2.js
+   node app2.js
 
-Access endpoints:
+3. Access endpoints:
 
-/v1: http://localhost:4000/v1
+   /v1: http://localhost:4000/v1
 
-/v2: http://localhost:4000/v2
+   /v2: http://localhost:4000/v2
 
-/v3: http://localhost:4000/v3
+   /v3: http://localhost:4000/v3
 
 # Conclusion
 This project successfully automates the extraction of names from the autocomplete API while documenting differences between versions and handling constraints effectively.
