@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 const API_URL_V1 = 'http://35.200.185.69:8000/v1/autocomplete?query=';
 const API_URL_V2 = 'http://35.200.185.69:8000/v2/autocomplete?query=';
 const API_URL_V3 = 'http://35.200.185.69:8000/v3/autocomplete?query=';
-
+ 
 app.get('/v1', async (req, res) => {
     try {
         const initialQueries = ['a', 'ivy', 'homes','soft','start','up'];

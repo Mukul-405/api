@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const url = 'http://35.200.185.69:8000/v2/autocomplete?query=a';
+const url = 'http://35.200.185.69:8000/v3/autocomplete?query=a';
 let requestCount = 0;
 
 async function sendRequests() {
