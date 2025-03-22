@@ -49,19 +49,22 @@ Each endpoint behaves differently:
 
 /v1: Structured word-like names.
 
-/v2: Alphanumeric combinations.
+/v2: Alphanumeric combinations like '0p', '9'
 
-/v3: Complex patterns with special characters.
+/v3: Complex patterns with special characters like '+','-'
 
 1. Results depend heavily on input prefixes
 
 2. After getting rate limit exceed or the status code 429 we have to wait for 1 Minute for getting new api request for all the endpoint /v1, /v2 and /v3
 
-3. Upto 100 request we can make using /v1 api endpoint
+3. Upto 100 request we can make using /v1/autocomplete?query=<string>
+   api endpoint
 
-4. Upto 50 request we can make using /v2 api endpoint
+4. Upto 50 request we can make using /v2/autocomplete?query=<string>
+   api endpoint
 
-5. Upto 80 request we can make using /v3 api endpoint
+5. Upto 80 request we can make using /v3/autocomplete?query=<string>
+   api endpoint
 
 6. For /v1 and /v3 api endpoint we can make any number of Api request per 1 second request
 
@@ -86,6 +89,11 @@ git clone https://github.com/Mukul-405/api.git
    /v2: http://localhost:4000/v2
 
    /v3: http://localhost:4000/v3
+
+4. Rate Limit Finding
+   
+   Run the code node rate.js and run the different endpoint of API with endpoint /v1/autocomplete?query=<string>, /v2/autocomplete?query=<string> and /v3/autocomplete?query=<string> where we will able to find the rate limit of the API and we can explore at different time interval i.e how many request per second we can make
+
 
 # Conclusion
 This project successfully automates the extraction of names from the autocomplete API while documenting differences between versions and handling constraints effectively.
